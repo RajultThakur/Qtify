@@ -2,7 +2,7 @@ import React from 'react'
 
 function Card({image, follower, title}) {
   return (
-    <div className='w-[200px] bg-black gap-0'>
+    <div className='bg-black gap-0'>
         <div className='w-[159px]  p-2'>
             <img className='rounded-tl-lg rounded-tr-lg w-full h-[170px] object-cover' src={image} alt="not found" />
         <div className='bg-white p-2 rounded-br-lg rounded-bl-lg'>
@@ -11,7 +11,7 @@ function Card({image, follower, title}) {
             </p>
         </div>
         </div>
-        <h3 className='text-white p-2 font-semibold text-lg'>{title}</h3>
+        <h3 className='text-white w-max p-2 font-semibold text-sm'>{title}</h3>
     </div>
   )
 }
