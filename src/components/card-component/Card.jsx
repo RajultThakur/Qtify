@@ -11,7 +11,7 @@ function Card({image, follower, title}) {
             </p>
         </div>
         </div>
-        <h3 className='text-white w-max p-2 font-semibold text-sm'>{title}</h3>
+        <h3 className='text-white w-max p-2 font-semibold text-xs'>{title.substring(0,20)}{`${title.length>20 && "..."}`}</h3>
     </div>
   )
 }
