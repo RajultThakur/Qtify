@@ -18,6 +18,7 @@ function App() {
   const getNewAlbums = async() => {
     const response = await fetch("https://qtify-backend-labs.crio.do/albums/new");
     const data = response.json();
+    console.log(data);
     return data
   }
 

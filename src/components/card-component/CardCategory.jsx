@@ -2,10 +2,9 @@ import React from 'react'
 import Card from './Card'
 import Buttons from './Buttons'
 import { useState, useEffect } from 'react'
-
 function CardCategory({albumsData, category, genres, setGenres}) {
   const [newData, setNewData] = useState(albumsData.slice(0,6));
-  // console.log(data);
+  console.log(albumsData);
   const [show, setShow] = useState(false);
   const handelClick = () =>{
     if(show){
@@ -32,7 +31,7 @@ function CardCategory({albumsData, category, genres, setGenres}) {
       <div className="mt-0 p-2 flex gap-1 bg-black flex-wrap items-center justify-around">
         {newData.length>0 ? newData.map((data, idx) => {
           return (
-            <Card key = {idx} image = {data.image} title = {data.title} follower={data.follows}/>
+            <Card key = {idx} image = {data.image} title = {data.title} follower={data.follows} songs = {`${!data.songs?0:data.songs.length}`}/>
           )
         }) : "loading..."}
         
